@@ -401,3 +401,6 @@ https://dev.to/mefaba/installing-wsl-on-another-drive-in-windows-5c4a
 
 https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+.. include:: substitution.txt
