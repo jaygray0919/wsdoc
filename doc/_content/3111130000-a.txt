@@ -1,0 +1,123 @@
+
+.. 3111130000-a.txt
+
+Examples
+########
+
+Image 1
+*******
+
+.. raw:: html
+
+   <amp-image-lightbox id="lightbox-1" layout="nodisplay"></amp-image-lightbox>
+   <amp-img
+     on="tap:lightbox-1"
+     role="button"
+     tabindex="0"
+     layout="fixed"
+     src="https://afdsi.com/_sphinx/ewb/3111110000-a-w1130-h699.png"
+     width="339"
+     height="210"
+   ></amp-img>
+
+
+Comment 1
+---------
+
+- How to use image 1
+
+
+Image 2
+*******
+
+.. raw:: html
+
+   <amp-image-lightbox id="lightbox-2" layout="nodisplay"></amp-image-lightbox>
+   <amp-img
+     on="tap:lightbox-2"
+     role="button"
+     layout="fixed"
+     tabindex="0"
+     src="https://afdsi.com/_sphinx/ewb/3111110000-b-w2083-h674.png"
+     width="625"
+     height="202"
+   ></amp-img>
+
+
+Comment 2
+---------
+
+- How to use image 2
+
+
+Image 3
+*******
+
+.. raw:: html
+
+   <amp-image-lightbox id="lightbox-3" layout="nodisplay"></amp-image-lightbox>
+   <amp-img
+     on="tap:lightbox-3"
+     role="button"
+     layout="fixed"
+     tabindex="0"
+     src="https://afdsi.com/_sphinx/ewb/3111110000-c-w1914-h884.png"
+     width="574"
+     height="265"
+   ></amp-img>
+
+
+Comment 3
+---------
+
+- How to use image 3
+
+
+Image 4
+*******
+
+.. raw:: html
+
+   <amp-image-lightbox
+     id="gallery-lightbox"
+     layout="nodisplay"
+   >
+   <div
+     on="tap:gallery-lightbox.close"
+     role="button"
+     tabindex="0"
+   >
+   <button
+     class="ampstart-btn caps m2 close-gallery-button"
+     on="tap:gallery-lightbox.close"
+     role="button"
+     tabindex="0"
+   >
+   Close
+   </button>
+   </div>
+   </amp-image-lightbox>
+   <div class="slide">
+   <span class="inner-image-wrap">
+   <amp-img
+     src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Reis-Rispe.jpg"
+     layout="fixed-height"
+     width="auto"
+     height="256"
+     on="tap:gallery-lightbox"
+     role="button"
+     tabindex="0"
+     alt=""
+     title="Wikidata image"
+   ></amp-img>
+   </span>
+   </div>
+
+
+Comment 4
+---------
+
+- How to use image 4
+
+
+.. include:: substitution.txt
