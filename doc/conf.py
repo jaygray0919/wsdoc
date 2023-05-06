@@ -254,5 +254,5 @@ html_search_language = 'en'
 
 # Output file base name for HTML help builder.
 
-htmlhelp_basename = 'wsdoc'
+htmlhelp_basename = 'wsd1'
 
