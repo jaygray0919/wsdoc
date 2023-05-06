@@ -139,7 +139,7 @@ If everything goes well, the services will be started and can be accessed on 808
 
 If you can see the messages as shown below, it means you are in luck.
 
-.. image:: media/image1.png
+.. image:: _images/image1.png
    :width: 6.26806in
    :height: 0.59167in
 
@@ -308,7 +308,7 @@ Create a PAT: https://docs.github.com/en/authentication/keeping-your-account-and
 Once the PAT is generated, copy it, and update the AMP_DOC_TOKEN parameter inside the “args” section in the docker-compose-prod.yml file. 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/image2.png
+.. image:: _images/image2.png
    :alt: Text Description automatically generated
    :width: 4.57856in
    :height: 0.51078in
@@ -364,7 +364,7 @@ GitHub PAT: ghp_b8UQyi3mt0LL6swTGC4WaX1i0e + 10 more
 Current Docker desktop
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/image3.png
+.. image:: _images/image3.png
    :width: 6.5in
    :height: 3.73403in
 
