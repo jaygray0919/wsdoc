@@ -24,7 +24,7 @@ Sphinx Catalogue
 
 
 Docker Setup
-============
+############
 
 The docker setup for AFDSI/websites is created for both local development environment and production environment.
 
@@ -32,8 +32,9 @@ Separate “Dockerfiles” and “docker-compose.yml” has been provided to cat
 
 Let’s discuss each one of them in detail.
 
+
 Local Development Environment:
-==============================
+##############################
 
 The docker setup for local dev env has been designed with the following considerations:
 
@@ -49,60 +50,61 @@ So, the container would have dependencies per-installed/baked as per the Dockerf
 
 Developers can do the changes as usual and to bring them to effect they need to follow the below steps. Flexibility to transition from docker to non-docker env or vice-versa is ensured.
 
+
 Pre-requisites:
-===============
+###############
 
 MacOS
------
+*****
 
 `Docker Desktop for Mac <https://docs.docker.com/desktop/mac/install/>`_
 
 
 Windows 
--------
+*******
 
 `Docker Desktop for Windows <https://docs.docker.com/desktop/windows/install/>`_
 
-`WSL 2 <https://docs.microsoft.com/en-us/windows/wsl/install>`_
+`WSL 2 <https://docs.microsoft.com/en*us/windows/wsl/install>`_
 
-`Ubuntu 20.04 LTS Distribution <https://www.microsoft.com/en-in/p/ubuntu-2004/9n6svws3rx71?rtc=1&activetab=pivot:overviewtab>`_
+`Ubuntu 20.04 LTS Distribution <https://www.microsoft.com/en*in/p/ubuntu*2004/9n6svws3rx71?rtc#1&activetab#pivot:overviewtab>`_
 
-`Windows Terminal <https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab>`_
+`Windows Terminal <https://www.microsoft.com/en*us/p/windows*terminal/9n0dx20hk701?activetab#pivot:overviewtab>`_
 
 
 Linux Bare Metal 
-----------------
+****************
 
-* Ubuntu 18.04/20.04 LTS 
+^ Ubuntu 18.04/20.04 LTS 
 
 `Docker <https://docs.docker.com/engine/install/ubuntu/>`_
 
-`docker-compose <https://docs.docker.com/compose/install/>`_
+`docker*compose <https://docs.docker.com/compose/install/>`_
 
 
 Steps to setup the local dev env
-================================
+################################
+
 
 Fully Automated Method
-----------------------
+**********************
 
 Clone the repo
-^^^^^^^^^^^^^^
+==============
 
-.. code-block:: bash
+.. code*block:: bash
 
    git clone `https://github.com/AFDSI/websites.git <https://github.com/div1127/amp.dev.git>`_ -b docker-updates
 
 
-Note: For now, you may use the above-mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
+Note: For now, you may use the above*mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
 
 Create a PAT (Personal Access Token) and update docker-compose.yml file.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+========================================================================
 
 Create a PAT:
 
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-
 
 Once the PAT is generated, copy and paste it on the notepad. 
 
@@ -113,7 +115,6 @@ To setup the local dev env, the script – local-env-setup.sh is created. Please
    cd websites
 
    ./local-env-setup.sh --build
-
 
 The script might take 25-30 minutes. Please, grab a coffee and wait for it to finish.
 
@@ -131,7 +132,7 @@ If you have reached till here, then you may consider the local dev env to be rea
 
 
 Build your changes
-^^^^^^^^^^^^^^^^^^
+==================
 
 Now, you may do the changes in the codebase as usual. After doing the changes, please issue the command the below command to restart the services and bring the changes into effect.
 
@@ -141,18 +142,18 @@ Now, you may do the changes in the codebase as usual. After doing the changes, p
 
 
 Validate your changes
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 You may access the services over the browser on the below mentioned addresses to validate the changes.
 
 
-* http://localhost:8080
+^ http://localhost:8080
 
-* http://localhost:8083
+^ http://localhost:8083
 
 
 Run Bootstrap [Optional]
-^^^^^^^^^^^^^^^^^^^^^^^^
+========================
 
 Although, during the build process the bootstrap command will run, but still for any reason you want to run the bootstrap command, you may issue the below command:
 
@@ -162,7 +163,7 @@ Although, during the build process the bootstrap command will run, but still for
 
 
 Clean-up of containers, cache, and networks [Recommended]
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=========================================================
 
 With the current local dev env approach, you might see several containers in the “exited” state doing nothing. These containers do not consume CPU and memory but can hog up space. To remove these containers, you can issue the below command.
 
@@ -174,7 +175,7 @@ This command stops (if running) and removes all the AFDSI/websites containers an
 
 
 Full Clean-Up [Optional]
-^^^^^^^^^^^^^^^^^^^^^^^^
+========================
 
 If you ever want to set up everything from the scratch, you can issue the below command. It will delete the “AFDSI/websites” images, networks, and containers. Volumes and repository will not be deleted. That must be deleted manually if needed. 
 
@@ -184,35 +185,30 @@ If you ever want to set up everything from the scratch, you can issue the below 
 
 
 Manual Method
--------------
+*************
 
 Although the automated method should work for most of the operating systems, platforms, cloud VMs but If for any reason, it doesn’t work for your environment/platform, you may use the manual method to setup the local dev env for you. This method will help you setup things faster, but has its own limitations.
 
-
 Clone the repo
-^^^^^^^^^^^^^^
+==============
 
 .. code-block:: bash
 
    git clone `https://github.com/AFDSI/websites.git <https://github.com/div1127/amp.dev.git>`_ -b docker-updates
 
-
 Note: For now, you may use the above-mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
 
-
 Create a PAT (Personal Access Token) and update docker-compose-manual.yml file.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===============================================================================
 
 Create a PAT: 
 
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
-
 Once the PAT is generated, copy and update the docker-compose-manual.yml file (environment section).
 
-
 Build the container and bring up the application.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=================================================
 
 .. code-block:: shell
 
@@ -220,7 +216,7 @@ Build the container and bring up the application.
 
 
 Exec into the container and run commands.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=========================================
 
 .. code-block:: shell
 
@@ -241,7 +237,7 @@ After getting the shell, you may run the following commands:
 
 
 Note: 
-^^^^^
+=====
 
 The container has sleep command as CMD.
 
@@ -249,7 +245,7 @@ The container has sleep command as CMD.
 
 
 Production Docker Environment
-=============================
+#############################
 
 The production docker setup has been created with the following considerations:
 
@@ -265,24 +261,21 @@ Minimal volumes “mounts” to avoid any intrusion.
 
 
 Steps to spin up production docker environment: 
-===============================================
+###############################################
 
 Create a PAT (Personal Access Token) and update docker-compose.yml file.
-------------------------------------------------------------------------
+************************************************************************
 
 Create a PAT: 
 
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
-
 Once the PAT is generated, copy it, and update the AMP_DOC_TOKEN parameter inside the “args” section in the docker-compose-prod.yml file. 
-
 
 .. image:: _images/image2.png
    :alt: Text Description automatically generated
    :width: 4.57856in
    :height: 0.51078in
-
 
 Build and start the services 
 
@@ -299,7 +292,7 @@ Stop the services
 
 
 Clean up and Rebuild
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 .. code-block:: shell
 
@@ -312,51 +305,51 @@ Note: The production docker setup is expected to evolve over the period. Further
 
 
 Next
-====
+####
 
 Make Mac work
--------------
+*************
 
 Current configuration
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
-* OS: Monterey
+^ OS: Monterey
 
-* Terminal: zsh
+^ Terminal: zsh
 
-* Editor: TextEdit or TextMate
+^ Editor: TextEdit or TextMate
 
-* Docker version: 20.10.23 build 7155243
+^ Docker version: 20.10.23 build 7155243
 
-* GitHub PAT: ghp_b8UQyi3mt0LL6swTGC4WaX1i0e + 10 more
+^ GitHub PAT: ghp_b8UQyi3mt0LL6swTGC4WaX1i0e + 10 more
 
 
 Current Docker desktop
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 .. image:: _images/image3.png
    :width: 6.5in
    :height: 3.73403in
 
-* Planning to delete ampdev
+^ Planning to delete ampdev
 
-* Planning to store AFDSI/websites in same directory
+^ Planning to store AFDSI/websites in same directory
 
 
 Make Windows work
------------------
+*****************
 
 Current configuration
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
-* WSL: uninstalled
+^ WSL: uninstalled
 
-* Docker: uninstalled
+^ Docker: uninstalled
 
 Next
-^^^^
+====
 
-* Clean install WSL on external drive
+^ Clean install WSL on external drive
 
 https://dev.to/mefaba/installing-wsl-on-another-drive-in-windows-5c4a
 
