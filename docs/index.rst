@@ -83,7 +83,7 @@ Linux Bare Metal
 
 `Docker <https://docs.docker.com/engine/install/ubuntu/>`_
 
-`docker*compose <https://docs.docker.com/compose/install/>`_
+`docker-compose <https://docs.docker.com/compose/install/>`_
 
 
 Steps to setup the local dev env
