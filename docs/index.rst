@@ -68,20 +68,17 @@ Pre-requisites:
 MacOS
 -----
 
-`Docker Desktop for Mac <https://docs.docker.com/desktop/mac/install/>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`Docker Desktop for Mac <https://docs.docker.com/desktop/mac/install/>`_
+
 
 Windows 
 -------
 
 `Docker Desktop for Windows <https://docs.docker.com/desktop/windows/install/>`_
 
-
 `WSL 2 <https://docs.microsoft.com/en-us/windows/wsl/install>`_
 
-
 `Ubuntu 20.04 LTS Distribution <https://www.microsoft.com/en-in/p/ubuntu-2004/9n6svws3rx71?rtc=1&activetab=pivot:overviewtab>`_
-
 
 `Windows Terminal <https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab>`_
 
@@ -90,10 +87,8 @@ Linux Bare Metal
 ----------------
 
 Ubuntu 18.04/20.04 LTS 
-~~~~~~~~~~~~~~~~~~~~~~
 
 `Docker <https://docs.docker.com/engine/install/ubuntu/>`_
-
 
 `docker-compose <https://docs.docker.com/compose/install/>`_
 
@@ -115,18 +110,20 @@ Note: For now, you may use the above-mentioned repository and branch. After your
 Create a PAT (Personal Access Token) and update docker-compose.yml file.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create a PAT: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+Create a PAT:
+
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
 Once the PAT is generated, copy and paste it on the notepad. 
 
-
 To setup the local dev env, the script – local-env-setup.sh is created. Please, run the following commands to start the build process.
 
-cd websites
-^^^^^^^^^^^
+.. code-block:: bash
 
-./local-env-setup.sh --build
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   cd websites
+
+   ./local-env-setup.sh --build
+
 
 The script might take 25-30 minutes. Please, grab a coffee and wait for
 it to finish.
@@ -135,12 +132,11 @@ If everything goes well, the services will be started and can be accessed on 808
 
 If you can see the messages as shown below, it means you are in luck.
 
-.. image:: media/image1.png
+.. image:: _images/image1.png
    :width: 6.26806in
    :height: 0.59167in
 
 Voila!
-
 
 If you have reached till here, then you may consider the local dev env to be ready. 
 
@@ -150,9 +146,10 @@ Build your changes
 
 Now, you may do the changes in the codebase as usual. After doing the changes, please issue the command the below command to restart the services and bring the changes into effect.
 
+.. code-block:: bash
 
-./local-env-setup.sh --reload
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   ./local-env-setup.sh --reload
+
 
 Validate your changes
 ~~~~~~~~~~~~~~~~~~~~~
@@ -171,8 +168,9 @@ Run Bootstrap [Optional]
 
 Although, during the build process the bootstrap command will run, but still for any reason you want to run the bootstrap command, you may issue the below command:
 
+.. code-block:: bash
 
-./local-env-setup.sh --bootstrap
+   ./local-env-setup.sh --bootstrap
 
 
 Clean-up of containers, cache, and networks [Recommended]
@@ -182,8 +180,9 @@ With the current local dev env approach, you might see several containers in the
 
 This command stops (if running) and removes all the AFDSI/websites containers and networks. It does not delete AFDSI/websites image(s), volumes, and source-code.
 
+.. code-block:: bash
 
-./local-env-setup.sh --clean
+   ./local-env-setup.sh --clean
 
 
 Full Clean-Up [Optional]
@@ -191,8 +190,9 @@ Full Clean-Up [Optional]
 
 If you ever want to set up everything from the scratch, you can issue the below command. It will delete the “AFDSI/websites” images, networks, and containers. Volumes and repository will not be deleted. That must be deleted manually if needed. 
 
+.. code-block:: bash
 
-./local-env-setup.sh –clean-all
+   ./local-env-setup.sh –clean-all
 
 
 Manual Method
@@ -204,11 +204,9 @@ your environment/platform, you may use the manual method to setup the
 local dev env for you. This method will help you setup things faster,
 but has its own limitations.
 
-.. _clone-the-repo-1:
 
 Clone the repo
 ~~~~~~~~~~~~~~
-
 
 git clone `https://github.com/AFDSI/websites.git <https://github.com/div1127/amp.dev.git>`_ -b docker-updates
 
@@ -218,7 +216,6 @@ Note: For now, you may use the above-mentioned repository and branch. After your
 
 Create a PAT (Personal Access Token) and update docker-compose-manual.yml file.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Create a PAT: 
 
@@ -231,28 +228,30 @@ Once the PAT is generated, copy and update the docker-compose-manual.yml file (e
 Build the container and bring up the application.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-docker-compose -f docker-compose-manual.yml up -d
+.. code-block:: shell
+
+   docker-compose -f docker-compose-manual.yml up -d
 
 
 Exec into the container and run commands.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-docker-compose ps (copy the container name/id from here)
+.. code-block:: shell
 
+   docker-compose ps (copy the container name/id from here)
 
-docker exec -it <container-id>/<name> /bin/bash
+   docker exec -it <container-id>/<name> /bin/bash
 
 
 After getting the shell, you may run the following commands:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-npm install
+.. code-block:: shell
 
+   npm install
 
-npm run bootstrap
+   npm run bootstrap
 
-
-npm run develop
+   npm run develop
 
 
 Note: 
@@ -282,7 +281,6 @@ Minimal volumes “mounts” to avoid any intrusion.
 Steps to spin up production docker environment: 
 ===============================================
 
-
 Create a PAT (Personal Access Token) and update docker-compose.yml file.
 ------------------------------------------------------------------------
 
@@ -294,30 +292,33 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/c
 Once the PAT is generated, copy it, and update the AMP_DOC_TOKEN parameter inside the “args” section in the docker-compose-prod.yml file. 
 
 
-.. image:: media/image2.png
+.. image:: _images/image2.png
    :alt: Text Description automatically generated
    :width: 4.57856in
    :height: 0.51078in
 
 Build and start the services 
 
+.. code-block:: shell
 
-docker-compose -f docker-compose-prod.yml up -d 
+   docker-compose -f docker-compose-prod.yml up -d 
 
 
 Stop the services 
 
+.. code-block:: shell
 
-docker-compose -f docker-compose-prod.yml down 
+   docker-compose -f docker-compose-prod.yml down 
 
 
 Clean up and Rebuild
 ~~~~~~~~~~~~~~~~~~~~
 
-*docker-compose* -f docker-compose-prod.yml down --rmi local
+.. code-block:: shell
 
+   *docker-compose* -f docker-compose-prod.yml down --rmi local
 
-*docker-compose -f* docker-compose-prod.yml up -d –build –force-recreate
+   *docker-compose -f* docker-compose-prod.yml up -d –build –force-recreate
 
 
 Note: The production docker setup is expected to evolve over the period. Further consideration can be sought and incorporated, if needed.
@@ -332,32 +333,27 @@ Make Mac work
 Current configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
-OS: Monterey
+* OS: Monterey
 
+* Terminal: zsh
 
-Terminal: zsh
+* Editor: TextEdit or TextMate
 
+* Docker version: 20.10.23 build 7155243
 
-Editor: TextEdit or TextMate
-
-
-Docker version: 20.10.23 build 7155243
-
-
-GitHub PAT: ghp_b8UQyi3mt0LL6swTGC4WaX1i0e + 10 more
+* GitHub PAT: ghp_b8UQyi3mt0LL6swTGC4WaX1i0e + 10 more
 
 
 Current Docker desktop
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/image3.png
+.. image:: _images/image3.png
    :width: 6.5in
    :height: 3.73403in
 
-Planning to delete ampdev
+* Planning to delete ampdev
 
-
-Planning to store AFDSI/websites in same directory
+* Planning to store AFDSI/websites in same directory
 
 
 Make Windows work
@@ -366,20 +362,18 @@ Make Windows work
 Current configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
-WSL: uninstalled
+* WSL: uninstalled
 
-
-Docker: uninstalled
-
+* Docker: uninstalled
 
 Next
 ~~~~
 
-Clean install WSL on external drive
-
+* Clean install WSL on external drive
 
 https://dev.to/mefaba/installing-wsl-on-another-drive-in-windows-5c4a
 
-
 https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
 
+
+.. include:: substitution.txt
