@@ -50,12 +50,12 @@ At the same time, it is important to ensure that the development env remains con
 
 For the same docker comes to the rescue. The idea is to have the dependencies packaged within a docker Image and the code to be shared between the host and the container via ``bind-mount`` docker volume.
 
-So, the container would have dependencies per|end|installed/baked as per the Dockerfile and the code will be accessible to it via docker volume.
+So, the container would have dependencies per |end| installed/baked as per the Dockerfile and the code will be accessible to it via docker volume.
 
-Developers can do the changes as usual and to bring them to effect they need to follow the below steps. Flexibility to transition from docker to non|end|docker env or vice|end|versa is ensured.
+Developers can do the changes as usual and to bring them to effect they need to follow the below steps. Flexibility to transition from docker to non |end| docker env or vice |end| versa is ensured.
 
 
-Pre|end|requisites:
+Pre |end| requisites:
 ###############
 
 MacOS
@@ -69,11 +69,11 @@ Windows
 
 `Docker Desktop for Windows <https://docs.docker.com/desktop/windows/install/>`_
 
-`WSL 2 <https://docs.microsoft.com/en*us/windows/wsl/install>`_
+`WSL 2 <https://docs.microsoft.com/en-us/windows/wsl/install>`_
 
-`Ubuntu 20.04 LTS Distribution <https://www.microsoft.com/en*in/p/ubuntu*2004/9n6svws3rx71?rtc#1&activetab#pivot:overviewtab>`_
+`Ubuntu 20.04 LTS Distribution <https://www.microsoft.com/en-in/p/ubuntu-2004/9n6svws3rx71?rtc#1&activetab#pivot:overviewtab>`_
 
-`Windows Terminal <https://www.microsoft.com/en*us/p/windows*terminal/9n0dx20hk701?activetab#pivot:overviewtab>`_
+`Windows Terminal <https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab#pivot:overviewtab>`_
 
 
 Linux Bare Metal 
@@ -98,10 +98,10 @@ Clone the repo
 
 .. code-block:: bash
 
-   git clone `https://github.com/AFDSI/websites.git <https://github.com/div1127/amp.dev.git>`_ -b docker-updates
+   git clone https://github.com/AFDSI/websites.git -b docker-updates
 
 
-Note: For now, you may use the above|end|mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
+Note: For now, you may use the above |end| mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
 
 Create a PAT (Personal Access Token) and update ``docker-compose.yml`` file.
 ========================================================================
@@ -120,7 +120,7 @@ To setup the local dev env, the script |emd| ``local-env-setup.sh`` is created. 
 
    ./local-env-setup.sh --build
 
-The script might take 25|end|30 minutes. Please, grab a coffee and wait for it to finish.
+The script might take 25 |end| 30 minutes. Please, grab a coffee and wait for it to finish.
 
 If everything goes well, the services will be started and can be accessed on 8080 and 8083 ports. 
 
@@ -166,7 +166,7 @@ Although, during the build process the bootstrap command will run, but still for
    ./local-env-setup.sh --bootstrap
 
 
-Clean|end|up of containers, cache, and networks [Recommended]
+Clean |end| up of containers, cache, and networks [Recommended]
 =========================================================
 
 With the current local dev env approach, you might see several containers in the “exited” state doing nothing. These containers do not consume CPU and memory but can hog up space. To remove these containers, you can issue the below command.
@@ -178,7 +178,7 @@ This command stops (if running) and removes all the AFDSI/websites containers an
    ./local-env-setup.sh --clean
 
 
-Full Clean|end|Up [Optional]
+Full Clean |end| Up [Optional]
 ========================
 
 If you ever want to set up everything from the scratch, you can issue the below command. It will delete the “AFDSI/websites” images, networks, and containers. Volumes and repository will not be deleted. That must be deleted manually if needed. 
@@ -198,9 +198,9 @@ Clone the repo
 
 .. code-block:: bash
 
-   git clone `https://github.com/AFDSI/websites.git <https://github.com/div1127/amp.dev.git>`_ -b docker-updates
+   git clone https://github.com/AFDSI/websites.git -b docker-updates
 
-Note: For now, you may use the above|end|mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
+Note: For now, you may use the above |end| mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
 
 Create a PAT (Personal Access Token) and update ``docker-compose-manual.yml`` file.
 ===============================================================================
@@ -253,11 +253,11 @@ Production Docker Environment
 
 The production docker setup has been created with the following considerations:
 
-The ``dockerfile``, ``docker-compose.yml`` and the resultant ``docker image`` should be self|end|contained with everything required to run ontomatica.com.
+The ``dockerfile``, ``docker-compose.yml`` and the resultant ``docker image`` should be self |end| contained with everything required to run ontomatica.com.
 
 It should be a fully baked Image. However, it should also be a trimmed docker image without optional packages/dependencies.
 
-Only necessary packages/libraries/binaries should be a part of the docker image. Trimmed, yet self|end|contained. 
+Only necessary packages/libraries/binaries should be a part of the docker image. Trimmed, yet self |end| contained. 
 
 There should be no code sharing between hosts and the containers. 
 
@@ -361,3 +361,4 @@ https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
 
 
 .. include:: substitution.txt
+
