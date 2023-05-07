@@ -110,7 +110,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/c
 
 Once the PAT is generated, copy and paste it on the notepad. 
 
-To setup the local dev env, the script |emd| ``local-env-setup.sh`` is created. Please, run the following commands to start the build process.
+To setup the local dev env, the script ``local-env-setup.sh`` is created. Please, run the following commands to start the build process.
 
 .. code-block:: bash
 
@@ -130,7 +130,7 @@ If you can see the messages as shown below, it means you are in luck.
 
 Voila!
 
-If you have reached till here, then you may consider the local dev env to be ready. 
+If you have reached till here, then you may consider the ``local dev env`` to be ready. 
 
 
 Build your changes
@@ -165,7 +165,7 @@ Although, during the build process the bootstrap command will run, but still for
 
 
 Clean |end| up of containers, cache, and networks [Recommended]
-=========================================================
+===============================================================
 
 With the current local dev env approach, you might see several containers in the “exited” state doing nothing. These containers do not consume CPU and memory but can hog up space. To remove these containers, you can issue the below command.
 
@@ -177,7 +177,7 @@ This command stops (if running) and removes all the AFDSI/websites containers an
 
 
 Full Clean |end| Up [Optional]
-========================
+==============================
 
 If you ever want to set up everything from the scratch, you can issue the below command. It will delete the “AFDSI/websites” images, networks, and containers. Volumes and repository will not be deleted. That must be deleted manually if needed. 
 
@@ -191,6 +191,7 @@ Manual Method
 
 Although the automated method should work for most of the operating systems, platforms, cloud VMs but If for any reason, it doesn’t work for your environment/platform, you may use the manual method to setup the local dev env for you. This method will help you setup things faster, but has its own limitations.
 
+
 Clone the repo
 ==============
 
@@ -200,6 +201,7 @@ Clone the repo
 
 Note: For now, you may use the above |end| mentioned repository and branch. After your confirmation, I can raise a PR and get this merged to the repo/branch of your choice.
 
+
 Create a PAT (Personal Access Token) and update ``docker-compose-manual.yml`` file.
 ===============================================================================
 
@@ -208,6 +210,7 @@ Create a PAT:
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
 Once the PAT is generated, copy and update the ``docker-compose-manual.yml`` file (environment section).
+
 
 Build the container and bring up the application.
 =================================================
@@ -265,8 +268,8 @@ Minimal volumes “mounts” to avoid any intrusion.
 Steps to spin up production docker environment: 
 ###############################################
 
-Create a PAT (Personal Access Token) and update ``docker-compose.yml`` file.
-************************************************************************
+Create a PAT (Personal Access Token) and update ``docker-compose.yml`` file
+***************************************************************************
 
 Create a PAT: 
 
@@ -279,14 +282,14 @@ Once the PAT is generated, copy it, and update the AMP_DOC_TOKEN parameter insid
    :width: 4.57856in
    :height: 0.51078in
 
-Build and start the services 
+``Build`` and start the services 
 
 .. code-block:: shell
 
    docker-compose -f docker-compose-prod.yml up -d 
 
 
-Stop the services 
+``Stop`` the services 
 
 .. code-block:: shell
 
