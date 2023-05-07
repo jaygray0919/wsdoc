@@ -4,12 +4,10 @@
    :width: 30%
    :alt: Ontomatica logo
 
-|br|
-|br|
-|br|
+|br| |br| |br| 
 
-Sphinx Catalogue
-----------------
+Website Documentation
+---------------------
 
 :Project: `Websites Docker Setup <https://example.com/index.html>`_
 :Author: `Divyansh Srivastav <divyanshsrivastav11@gmail.com>`_
@@ -20,7 +18,7 @@ Sphinx Catalogue
    :align: left
    :width: 7%
 
-|br|
+|br| 
 
 .. toctree::
    :maxdepth: 2
@@ -245,7 +243,7 @@ Note:
 
 The container has sleep command as CMD.
 
-\`npm run develop\` will stop as soon as you exit the container. If you like to keep it running, then you may have to run it in background(&) in combination with “nohup”.
+``npm run develop`` will stop as soon as you exit the container. If you like to keep it running, then you may have to run it in background(&) in combination with ``nohup``.
 
 
 Production Docker Environment
