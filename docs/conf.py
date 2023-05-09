@@ -9,17 +9,15 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 CURDIR = os.path.abspath(os.path.dirname(__file__))
 
-# If extensions (or modules to document with auto-doc) are in another directory, add these directories to sys.path here.
-# add custom extensions directory to python path
-#sys.path.append(os.path.join(os.path.abspath(os.path.dirname(__file__)), '_extensions'))
-
 # -- General configuration ----------------------------------
 
 # Add any Sphinx extension module names here, as strings.
 # They can be extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 
 extensions = [
+    'myst_parser',
     'sphinx_rtd_theme',
+    'sphinx_search.extension',
     'hoverxref.extension',
     'sphinxemoji.sphinxemoji',
     'sphinxcontrib.contentui',
@@ -30,7 +28,6 @@ extensions = [
     'sphinx.ext.graphviz',
     'sphinx.ext.viewcode',
     'sphinx_copybutton',
-    'sphinx_search.extension',
     'sphinx_tabs.tabs',
     ]
 
@@ -66,7 +63,11 @@ sphinxemoji_style = 'twemoji'
 templates_path = ['_templates']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = {
+   '.rst': 'restructuredtext',
+   '.txt': 'markdown',
+    '.md': 'markdown',
+}
 
 # The encoding of source files.
 source_encoding = 'utf-8-sig'
@@ -160,10 +161,10 @@ html_title = ""
 
 # A shorter title for the navigation bar. Default is the same as html_title.
 
-html_short_title = 'Website Doc'
+html_short_title = 'Div Doc'
 
 # The name of an image file (relative to this directory) to place at the top of the sidebar.
-#html_logo = 'Ontomatica.png'
+html_logo = '_images/onto-logo-text-blue-w325-h60.svg'
 
 # The name of an image file (within the static path) to use as favicon of the docs.
 # This file should be a Windows icon file (.ico) being 16x16 or 32x32 pixels large.
@@ -174,7 +175,6 @@ html_favicon = "onto-shortcut-w252-h252-color-ffffff-bgnd-1f64ff.svg"
 
 html_static_path = [
     '_static',
-    '_content',
     '_images',
 ]
 
@@ -229,10 +229,6 @@ html_show_sphinx = False
 
 html_show_copyright = False
 
-# If true, an OpenSearch description file will be output, and all pages will contain a <link> tag referring to it.
-# The value of this option must be the base URL from which the finished HTML is served.
-#html_use_opensearch = ''
-
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 
 html_file_suffix = '.html'
@@ -244,15 +240,7 @@ html_file_suffix = '.html'
 
 html_search_language = 'en'
 
-# A dictionary with options for the search language support, empty by default.
-# Now only 'ja' uses this config value
-#html_search_options = {'type': 'default'}
-
-# The name of a javascript file (relative to the configuration directory) that implements a search results scorer.
-# If empty, the default will be used.
-#html_search_scorer = 'scorer.js'
-
 # Output file base name for HTML help builder.
 
-htmlhelp_basename = 'wsd1'
+htmlhelp_basename = 'div-doc'
 
