@@ -16,11 +16,11 @@ There should be no code sharing between hosts and the containers.
 
 Minimal volumes “mounts” to avoid any intrusion. 
 
-Steps to spin up production docker environment: 
-###############################################
+Steps to spin up production docker environment
+**********************************************
 
 Create a PAT (Personal Access Token) and update ``docker-compose.yml`` file
-***************************************************************************
+---------------------------------------------------------------------------
 
 Create a PAT: 
 
@@ -48,7 +48,7 @@ Once the PAT is generated, copy it, and update the AMP_DOC_TOKEN parameter insid
 
 
 Clean up and Rebuild
-====================
+********************
 
 .. code-block:: shell
 

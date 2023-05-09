@@ -24,9 +24,9 @@ Website Documentation
    :maxdepth: 2
    :caption: 🍱 Collection
 
-   3111110000
-   3111120000
-   3111130000
+   3111110000.md
+   3111120000.md
+   3111130000.md
    3111140000.rst
    3111150000.rst
    3111170000.rst
