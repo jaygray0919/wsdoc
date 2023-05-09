@@ -31,10 +31,15 @@ Website Documentation
    3111150000.rst
    3111170000.rst
 
-   OnVersionControl.rst
-   UsingGit.rst
-   UsingAnOnlineGitRepository.rst
-   SetUpSSHForGit.rst
+.. toctree::
+   :maxdepth: 2
+   :caption: 🍱 Version Control
+
+   3111210000.rst
+   3111220000.rst
+   3111230000.rst
+   3111240000.rst
+
 
 .. include:: substitution.txt
 
