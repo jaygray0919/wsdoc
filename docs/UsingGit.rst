@@ -12,15 +12,6 @@ The following resources contain useful information on version control systems:
    a simple explanation of version control with Subversion examples.
 * `A successful Git branching model`_: a clear and structured workflow.
 
-Git CheatSheet
-==============
-
-.. admonition:: Source
-   
-   Git CheatSheet,(c) 2011, salesforce.com, inc.,  
-   URL: https://na1.salesforce.com/help/doc/en/salesforce_git_developer_cheatsheet.pdf 
-   
-
 Overview
 --------
 
@@ -189,7 +180,7 @@ A place to hide modifications made to the workspace,
 while working on something else.
 (The stash area is not required in a "normal" workflow.)
 
-.. image:: img/Git-Cheatsheet_Stash.png
+.. image:: _images/Git-Cheatsheet_Stash.png
    :alt: Git commands that affect the stash
    :width: 80%
    
@@ -198,7 +189,7 @@ Workspace
 
 The local working area.
 
-.. image:: img/Git-Cheatsheet_Workspace.png
+.. image:: _images/Git-Cheatsheet_Workspace.png
    :alt: Git commands that affect the workspace
    :width: 80%
 
@@ -209,7 +200,7 @@ The "index"-- or "staging area" --
 holds a snapshot of the content of the working area,
 and it is this snapshot that is taken as the contents of the next commit.
 
-.. image:: img/Git-Cheatsheet_Staging.png
+.. image:: _images/Git-Cheatsheet_Staging.png
    :alt: commands that affect the staging area
    :width: 80%
 
@@ -219,7 +210,7 @@ Local repository
 A local area under version control.
 Typical branches: master, dev (for local development), feature_x, bugfix_y
 
-.. image:: img/Git-Cheatsheet_LocalRepo.png
+.. image:: _images/Git-Cheatsheet_LocalRepo.png
    :alt: commands that affect the local repository
    :width: 80%
 
@@ -229,7 +220,7 @@ Upstream repository
 Typically a remote area under version control.
 Default name is 'origin'. Typical branches here: master, shared_feature_x, release_y.
 
-.. image:: img/Git-Cheatsheet_UpstreamRepo.png
+.. image:: _images/Git-Cheatsheet_UpstreamRepo.png
    :alt: commands that affect the upstream repository
    :width: 80%
 
