@@ -31,5 +31,12 @@ Website Documentation
    3111150000.rst
    3111170000.rst
 
+   OnVersionControl.rst
+   UsingGit.rst
+   UsingAnOnlineGitRepository.rst
+   SetUpSSHForGit.rst
+
 .. include:: substitution.txt
+
+.. include:: ../_SharedFiles/GenericLinks.txt
 
