@@ -2,16 +2,6 @@
 Set up SSH for Git
 =====================
 
-.. note:: Sources
-
-   Mostly from: 
-   https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git
-
-   Mixed with: 
-   https://help.github.com/categories/56/articles
-   https://help.github.com/articles/working-with-ssh-key-passphrases
-   http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/
-   
 When you use HTTPS, you need to authenticate (supply a username and password) 
 each time you take an action that communicates with the remote server. 
 This page shows you how to use secure shell (SSH) 

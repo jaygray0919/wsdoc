@@ -2,7 +2,6 @@
 Version Control using Git
 *************************
 
-
 Before you start
 ================
 

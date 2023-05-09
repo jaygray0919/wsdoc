@@ -2,7 +2,7 @@
 Setting up an online Git Repository
 ***********************************
 
-Three possible alternatives are:
+Two possible alternatives are:
 
 *  Using Atlassian Bitbucket_:
    it is free for public and private repositories (up to 5 team members),
@@ -10,7 +10,6 @@ Three possible alternatives are:
 
 *  Using GitHub_: it is free for public repositories
 
-*  Using Dropbox_ : is is free up to a 2GB maximum storage.
 
 Using Bitbucket
 ===============
@@ -57,83 +56,6 @@ The steps are similar to the ones when using Bitbucket...
    $  git remote add origin https://github.com/johndoe/projectXPTO.git
 
 (steps 5 and 6 as above)
-
-Using Dropbox
-=============
-
-Please note that this is a more complicated solution,
-that is only useful if the Bitbucket_ or Github_ options
-cannot be used for some reason...
-
-Dropbox_ is a cloud storage service provider.
-A Dropbox client application
-is available for Windows, Mac OSX, Linux and Android operating systems.
-The client application synchronises the content of a local Dropbox folder
-(in the client computer's disk) with the cloud Dropbox storage area.
-
-A git repository is created in the local Dropbox folder
-and it will work if it were an “remote” upstream git repository.
-
-Another local repository
-(located somewhere in the local disk, but **not** in the Dropbox folder)
-can then clone, push or sync with the Dropbox “remote” repository.
-
-The rest is done automatically by the Dropbox application:
-the “remote” folder will be synced with online storage
-and will accessible from anywhere.
-
-Setup the “remote” and the local repositories
----------------------------------------------
-
-#. Install both Git and the Dropbox client application on the computer.
-
-#. Go to the local Dropbox folder and create a bare repository.
-   Open a Git Bash window::
-
-   $ cd ~/Dropbox
-   $ mkdir -p remoteRepos/ProjectXPTO
-   $ git init –bare remoteRepos/ProjectXPTO
-
-#. Go to the local project folder, and start a local git repository::
-
-   $ cd ~/localRepos/ProjectXPTO
-   $ git init .
-   $ git add .
-   $ git commit –all -m "Initial commit"
-    
-#. Link the local repository to the “remote” repository on the Dropbox folder:: 
-    
-   $ git remote add dropbox /Dropbox/remoteRepos/ProjectXPTO/
-   
-#. Push all the local changes to the “remote” repository::
-
-   $ git push dropbox master
-
-Clone the “remote” repository to a different machine
-----------------------------------------------------
-
-#. Again, both Git and the Dropbox application must be installed
-   **and** the Dropbox folders must be synced.
-
-#. Then, clone the “remote” repository with::
-
-   $ cd ~/otherMachine/ProjectXPTO
-   $ git clone -o dropbox /Dropbox/remoteRepos/ProjectXPTO/
-    
-Push changes to the “remote” repository
----------------------------------------
-
-#. Changes to the local project can be pushed back to the  “remote”::
-
-   $ git commit –all -m "Changes made!"
-   $ git push dropbox master
-
-Sync the local copy with the “remote” repository
-------------------------------------------------
-
-#. To sync the local copy with the “remote” repository::
-
-   $ git pull dropbox master
 
 
 .. links-placeholder
