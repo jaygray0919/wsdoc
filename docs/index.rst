@@ -33,13 +33,13 @@ Website Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🍱 div.dev
+   :caption: 🏠 div.dev
 
    3111310000.md
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🍱 Version Control
+   :caption: 🎉 Version Control
 
    3111210000.rst
    3111220000.rst
@@ -49,18 +49,17 @@ Website Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🍱 linux
+   :caption: 🐧 linux
 
    linux/index.rst
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🍱 docker
+   :caption: 🐳 docker
 
    docker/index.rst
 
 
 .. include:: substitution.txt
 
-.. include:: ../_SharedFiles/GenericLinks.txt
 
