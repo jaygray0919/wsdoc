@@ -47,6 +47,11 @@ Website Documentation
 
    3111310000.md
 
+.. toctree::
+   :maxdepth: 2
+   :caption: 🍱 linux
+
+   linux/index.rst
 
 .. include:: substitution.txt
 
