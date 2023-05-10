@@ -9,7 +9,7 @@
 Website Documentation
 ---------------------
 
-:Project: `Websites Docker Setup <https://example.com/index.html>`_
+:Project: `Websites Setup <https://example.com/index.html>`_
 :Author: `Divyansh Srivastav <divyanshsrivastav11@gmail.com>`_
 :Organization: `Ontomatica <https://dailyfood.io>`_
 :Date: 07 May 2023
@@ -33,6 +33,12 @@ Website Documentation
 
 .. toctree::
    :maxdepth: 2
+   :caption: 🍱 div.dev
+
+   3111310000.md
+
+.. toctree::
+   :maxdepth: 2
    :caption: 🍱 Version Control
 
    3111210000.rst
@@ -43,15 +49,16 @@ Website Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🍱 div.dev
-
-   3111310000.md
-
-.. toctree::
-   :maxdepth: 2
    :caption: 🍱 linux
 
    linux/index.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 🍱 docker
+
+   docker/index.rst
+
 
 .. include:: substitution.txt
 
