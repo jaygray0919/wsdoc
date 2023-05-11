@@ -59,6 +59,12 @@ Website Documentation
 
    docker/index.rst
 
+.. toctree::
+   :maxdepth: 2
+   :caption: more on git
+
+   git/index.rst
+
 
 .. include:: substitution.txt
 
