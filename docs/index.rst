@@ -12,7 +12,7 @@ Website Documentation
 :Project: `Websites Setup <https://example.com/index.html>`_
 :Author: `Divyansh Srivastav <divyanshsrivastav11@gmail.com>`_
 :Organization: `Ontomatica <https://dailyfood.io>`_
-:Date: 07 May 2023
+:Date: 11 May 2023
 
 .. image:: _images/docs-latest.svg
    :align: left
@@ -39,7 +39,7 @@ Website Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🎉 Version Control
+   :caption: 🗃 Version Control
 
    3111210000.rst
    3111220000.rst
@@ -61,7 +61,7 @@ Website Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: more on git
+   :caption: 🛠 more on git
 
    git/index.rst
 
