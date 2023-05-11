@@ -20,12 +20,16 @@ extensions = [
     'sphinx_search.extension',
     'hoverxref.extension',
     'sphinxemoji.sphinxemoji',
+    'sphinxcontrib.bibtex',
     'sphinxcontrib.contentui',
     'sphinxcontrib.httpdomain',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.autosummary',
+    'sphinx.ext.duration',
     'sphinx.ext.graphviz',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
@@ -95,6 +99,34 @@ number_figures = True
 # Else, today_fmt is used as the format for a strftime call.
 
 today_fmt = '%d %B %Y'
+
+
+if 'sphinxcontrib.bibtex' in extensions:
+    bibtex_bibliography_header = ".. rubric:: References"
+    bibtex_footbibliography_header = bibtex_bibliography_header
+    bibtex_default_style = 'alpha'
+    bibtex_bibfiles = [
+        '_references/bibliography.bib',
+        '_references/images.bib',
+        'docker/_references/bibliography.bib',
+        'git/_references/bibliography.bib',
+        ]
+
+if 'sphinx.ext.extlinks' in extensions:
+    extlinks = {'isbn': ('https://e-isbn.pl/IsbnWeb/start/search.html?szukaj_fraza=%s', 'ISBN: ')}
+
+
+if 'sphinx.ext.mathjax' in extensions:
+    imgmath_image_format = 'png'
+    # mathjax_path = '_static/mathjax.js'
+    mathjax_path = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+    mathjax_config = {
+        'extensions': ['tex2jax.js'],
+        'jax': ['input/TeX', 'output/HTML-CSS']}
+    if 'script_files' in html_context:
+        html_context['script_files'] += [mathjax_path]
+    else:
+        html_context['script_files'] = [mathjax_path]
 
 
 # List of patterns, relative to source directory, that match files and directories to ignore when looking for source files.
