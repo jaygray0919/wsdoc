@@ -123,10 +123,10 @@ if 'sphinx.ext.mathjax' in extensions:
     mathjax_config = {
         'extensions': ['tex2jax.js'],
         'jax': ['input/TeX', 'output/HTML-CSS']}
-    if 'script_files' in html_context:
-        html_context['script_files'] += [mathjax_path]
-    else:
-        html_context['script_files'] = [mathjax_path]
+#    if 'script_files' in html_context:
+#        html_context['script_files'] += [mathjax_path]
+#    else:
+#        html_context['script_files'] = [mathjax_path]
 
 
 # List of patterns, relative to source directory, that match files and directories to ignore when looking for source files.
