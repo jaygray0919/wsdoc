@@ -4,10 +4,10 @@
    :maxdepth: 1
    :caption: div.dev setup
 
-   3111310000.md
-   3111110000.md
-   3111120000.md
-   3111130000.md
-   3111140000.rst
-   3111150000.rst
-   3111170000.rst
+   docs/3111310000.md
+   docs/3111110000.md
+   docs/3111120000.md
+   docs/3111130000.md
+   docs/3111140000.rst
+   docs/3111150000.rst
+   docs/3111170000.rst
