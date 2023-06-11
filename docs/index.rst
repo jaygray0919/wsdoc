@@ -24,12 +24,13 @@ Website Documentation
    :maxdepth: 2
    :caption: 🍱 Collection
 
-   3111110000.md
-   3111120000.md
-   3111130000.md
-   3111140000.rst
-   3111150000.rst
-   3111170000.rst
+   div-dev/3111310000.md
+   div-dev/3111110000.md
+   div-dev/3111120000.md
+   div-dev/3111130000.md
+   div-dev/3111140000.rst
+   div-dev/3111150000.rst
+   div-dev/3111170000.rst
 
 .. toctree::
    :maxdepth: 2
@@ -41,10 +42,10 @@ Website Documentation
    :maxdepth: 2
    :caption: 🗃 Version Control
 
-   3111210000.rst
-   3111220000.rst
-   3111230000.rst
-   3111240000.rst
+   version-control/3111210000.rst
+   version-control/3111220000.rst
+   version-control/3111230000.rst
+   version-control/3111240000.rst
 
 
 .. toctree::
