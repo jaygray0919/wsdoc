@@ -1,18 +1,10 @@
-# This file is execfile()d with the current directory set to its containing dir.
 
 import sys
 import os
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
-# directory relative to this conf file
-
 CURDIR = os.path.abspath(os.path.dirname(__file__))
-
-# -- General configuration ----------------------------------
-
-# Add any Sphinx extension module names here, as strings.
-# They can be extensions coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 
 extensions = [
     'myst_parser',
@@ -60,8 +52,6 @@ graphviz_output_format = 'svg'
 
 # -- sphinxemoji configuration -------------------------------
 sphinxemoji_style = 'twemoji'
-
-# -- More general configuration ------------------------------
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
