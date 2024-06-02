@@ -10,7 +10,7 @@ Website Documentation
 ---------------------
 
 :Project: `Websites Setup <https://example.com/index.html>`_
-:Author: `Divyansh Srivastav <divyanshsrivastav11@gmail.com>`_
+:Author: `Anant Agrawal <https://github.com/anant-k-agrawal>`_
 :Organization: `Ontomatica <https://dailyfood.io>`_
 :Date: 11 May 2023
 
