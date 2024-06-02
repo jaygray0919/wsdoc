@@ -9,9 +9,9 @@
 Website Documentation
 ---------------------
 
-:Project: `Websites Setup <https://example.com/index.html>`_
+:Project: `Websites Setup <https://github.com/anant-k-agrawal/jay.dev>`_
 :Author: `Anant Agrawal <https://github.com/anant-k-agrawal>`_
-:Organization: `Ontomatica <https://dailyfood.io>`_
+:Organization: `Ontomatica <https://ontomatica.io>`_
 :Date: 01 June 2024
 
 .. image:: _images/docs-latest.svg
