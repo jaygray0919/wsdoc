@@ -12,7 +12,7 @@ Website Documentation
 :Project: `Websites Setup <https://example.com/index.html>`_
 :Author: `Anant Agrawal <https://github.com/anant-k-agrawal>`_
 :Organization: `Ontomatica <https://dailyfood.io>`_
-:Date: 11 May 2023
+:Date: 01 June 2024
 
 .. image:: _images/docs-latest.svg
    :align: left
